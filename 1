@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int check(const char* s)
+{
+    int i, c;
+    for (i = 0; *(s + i) != '\0'; i++)
+    {
+        c = *(s + i );
+    }
+    if (c >= 65 && c <= 90)
+    {
+        return '1';
+    }
+    else
+    {
+        return '0';
+    }
+}
+
+void rule1(char *s)
+{
+    int i, c;
+    for (i = 0; *(s + i) != '\0'; i++)
+    {
+        c = *(s + i);
+        if (c >= 89 && c <= 113)
+        {
+            *(s + i) = c + 1;
+        }
+    }
+}
+
+int main()
+{
+    char *s = "ABCC00a1bbbcccAYY22yAZ999zzQ";
+    printf("%c\n", check(s));
+    printf("%s\n", s);
+    char* v = "ahs fh,lsKL js";
+    printf("%s\n", v);
+    *(v + 2) = 54;
+    printf("%s\n", v);
+    printf("%d\n", getchar());
+    return 0;
+}
